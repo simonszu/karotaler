@@ -5,7 +5,7 @@ require 'yaml'
 
 # Spezifizieren der Userdaten
 CONFIG_FILE = 'config.yaml'
-config = YAML::load(File.open(File.join(File.dirname(__FILE__), CONFIG_FILE)))
+config = YAML::load(File.open(File.join(File.dirname(__FILE__), 'config', CONFIG_FILE)))
 username = config['username']
 password = config['password']
 

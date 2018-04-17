@@ -1,0 +1,2 @@
+0 7 * * * root /usr/local/bin/ruby /app/karotaler.rb
+
