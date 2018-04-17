@@ -1,10 +1,13 @@
 #! /usr/bin/env ruby
 puts "Requiring..."
 require 'mechanize'
+require 'yaml'
 
 # Spezifizieren der Userdaten
-username = ""
-password = ""
+CONFIG_FILE = 'config.yaml'
+config = YAML::load(File.open(File.join(File.dirname(__FILE__), CONFIG_FILE)))
+username = config['username']
+password = config['password']
 
 # Generieren eines neuen Mechanize-Agenten
 puts "Starting agent..."
