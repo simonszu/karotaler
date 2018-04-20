@@ -15,7 +15,9 @@ RUN mkdir -p /app/config \
 COPY karotaler.rb /app
 COPY config.yaml.example /template
 COPY run.sh /
-COPY karotaler-cron /etc/cron.d
-RUN chmod +x /run.sh
+COPY cron /etc/cron.d
+RUN chmod +x /run.sh \
+    && chmod +x /etc/cron.d/cron \
+    && touch /var/log/cron.log
 
 ENTRYPOINT ["/run.sh"]
