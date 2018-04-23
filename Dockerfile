@@ -11,8 +11,7 @@ RUN apt-get update \
 
 RUN gem install mechanize
 
-RUN mkdir -p /app/config \
-    && mkdir /template
+RUN mkdir /template
 
 COPY karotaler.rb /template
 COPY run.sh /
