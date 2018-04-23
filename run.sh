@@ -1,7 +1,6 @@
 #! /bin/bash
 
-if [ ! -f /app/config/config.yaml ]; then
-  cp /template/config.yaml.example /app/config/config.yaml
-fi
+envsubst < /template/karotaler.rb | tee /app/karotaler.rb
+chmod +x /app/karotaler.rb
 
 cron -f && tail -f /var/log/cron.log

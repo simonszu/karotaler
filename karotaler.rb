@@ -4,10 +4,8 @@ require 'mechanize'
 require 'yaml'
 
 # Spezifizieren der Userdaten
-CONFIG_FILE = 'config.yaml'
-config = YAML::load(File.open(File.join(File.dirname(__FILE__), 'config', CONFIG_FILE)))
-username = config['username']
-password = config['password']
+username = "${USER}"
+password = "${PASSWORD}"
 
 # Generieren eines neuen Mechanize-Agenten
 puts "Starting agent..."
