@@ -2,6 +2,7 @@ FROM ruby:2.5-alpine
 
 RUN apk --no-cache add \
     bash \
+    build-base \
     gettext \
     tzdata
 
