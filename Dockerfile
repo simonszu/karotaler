@@ -12,7 +12,7 @@ RUN gem install mechanize
 RUN mkdir /template
 
 COPY karotaler.rb /template
-COPY cron /template
+COPY crontab.txt /template
 RUN /usr/bin/crontab /template/crontab.txt
 
 COPY run.sh /
