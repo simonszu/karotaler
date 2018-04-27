@@ -10,6 +10,8 @@ ENV TZ=Europe/Berlin
 
 RUN gem install mechanize
 
+RUN apk del build-base
+
 RUN mkdir /template
 
 COPY karotaler.rb /template
