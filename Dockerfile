@@ -12,7 +12,8 @@ RUN gem install mechanize
 
 RUN apk del build-base
 
-RUN mkdir /template
+RUN mkdir /template \
+    && mkdir /app
 
 COPY karotaler.rb /template
 COPY crontab.txt /template
